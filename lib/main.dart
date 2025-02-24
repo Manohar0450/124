@@ -27,6 +27,7 @@ class LetterApp extends StatelessWidget {
     );
   }
 }
+
 class H1 extends StatelessWidget {
   const H1({super.key});
 
@@ -36,145 +37,154 @@ class H1 extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Center(child: Text("Ai Agent's",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)),
-
+        title: Center(
+            child: Text(
+          "Ai Agent's",
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        )),
       ),
-      body:
-
-      Column(
+      body: Column(
         children: [
-
-          Text("  Explore AI Agents     ",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+          Text(
+            "  Explore AI Agents     ",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Most popular Agents by our community ",style: TextStyle(fontSize: 16),),
+            child: Text(
+              "Most popular Agents by our community ",
+              style: TextStyle(fontSize: 16),
+            ),
           ),
-    Stack(
-              alignment: Alignment.topLeft,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: 300,
-                    height: 150,
-                    decoration: BoxDecoration(
-                      color: Color(0xffFAE7F9),
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black,
-                          blurRadius: 4,
-                          // spreadRadius: 2
-                        )
-                      ]
+          Stack(alignment: Alignment.topLeft, children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                width: 300,
+                height: 150,
+                decoration: BoxDecoration(
+                    color: Color(0xffFAE7F9),
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black,
+                        blurRadius: 4,
+                        // spreadRadius: 2
+                      )
+                    ]),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    // Text("fdvfd"),
 
-                    ),
-                    child:Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        // Text("fdvfd"),
-
-                        Container(
-                          width: 300,
-                          height: 110,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(color: Colors.white),
-                              borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft: Radius.circular(10)),
-
+                    Container(
+                      width: 300,
+                      height: 110,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(10),
+                            bottomLeft: Radius.circular(10)),
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 30,
                           ),
-                          child:
-
-                          Column(
+                          Row(
                             children: [
-                              SizedBox(height: 30,),
-                              Row(
-                                children: [
-                                  SizedBox(width: 10,),
-
-                                  Text("Ai Letter Agent",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                                ],
+                              SizedBox(
+                                width: 10,
                               ),
-
-                              Row(
-                                children: [
-                                  Text(""),
-                                  SizedBox(width: 200,),
-                                  GestureDetector(
-                                    onTap: (){
-                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LetterTypeSelectionPage()));
-                                    },
-                                    child: Container(
-                                      width: 80,
-                                      height: 40,
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          border: Border.all(color: Colors.green),
-                                          borderRadius: BorderRadius.circular(10),
-
-
-                                      ),
-                                      child:
-                                      Center(
-
-                                          child: Text("Recruit",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.green),)),
-
-                                    ),
-                                  ),
-                                ],
+                              Text(
+                                "Ai Letter Agent",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
                               ),
-
-                              // Text("",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-
                             ],
                           ),
 
-                        ),
-                      ],
-                    ) ,
-
-                  ),
-
-                ),
-                Column(
-                  children: [
-                    SizedBox(height: 20,),
-                    Row(
-                      children: [
-                        SizedBox(width: 30,),
-                        Container(
-                          width: 40,
-                          height: 40,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              // border: Border.all(color: Colors.black),
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black,
-                                  blurRadius: 0.1,
-                                  // spreadRadius: 2
-                                )
-                              ]
-
+                          Row(
+                            children: [
+                              Text(""),
+                              SizedBox(
+                                width: 200,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              LetterTypeSelectionPage()));
+                                },
+                                child: Container(
+                                  width: 80,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(color: Colors.green),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Center(
+                                      child: Text(
+                                    "Recruit",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.green),
+                                  )),
+                                ),
+                              ),
+                            ],
                           ),
-                          // child: ,
-                        ),
-                      ],
+
+                          // Text("",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                        ],
+                      ),
                     ),
                   ],
                 ),
-          ]
-          ),
+              ),
+            ),
+            Column(
+              children: [
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 30,
+                    ),
+                    Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          // border: Border.all(color: Colors.black),
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black,
+                              blurRadius: 0.1,
+                              // spreadRadius: 2
+                            )
+                          ]),
+                      // child: ,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ]),
         ],
       ),
-
-
     );
   }
 }
-
 
 class LetterTypeSelectionPage extends StatelessWidget {
   @override
@@ -189,7 +199,8 @@ class LetterTypeSelectionPage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LetterCategoryPage(isFormal: true)),
+                  MaterialPageRoute(
+                      builder: (context) => LetterCategoryPage(isFormal: true)),
                 );
               },
               child: Text("Formal Letter"),
@@ -199,7 +210,9 @@ class LetterTypeSelectionPage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LetterCategoryPage(isFormal: false)),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          LetterCategoryPage(isFormal: false)),
                 );
               },
               child: Text("Informal Letter"),
@@ -214,10 +227,68 @@ class LetterTypeSelectionPage extends StatelessWidget {
 class LetterCategoryPage extends StatelessWidget {
   final bool isFormal;
   final Map<String, List<String>> formalFields = {
-    "Job Application Letter": ["Your Name", "Your Address", "City, State, ZIP Code", "Your Email", "Your Phone Number", "Date", "Hiring Manager’s Name", "Company Name", "Company Address", "City, State, ZIP Code", "Job Position", "Your Field/Experience", "Your Qualifications"],
-    "Resignation Letter": ["Your Name", "Your Address", "City, State, ZIP Code", "Your Email", "Your Phone Number", "Date", "Manager’s Name", "Company Name", "Company Address", "City, State, ZIP Code", "Your Position", "Last Working Date"],
-    "Leave of Absence Request": ["Your Name", "Your Address", "City, State, ZIP Code", "Your Email", "Your Phone Number", "Date", "Manager’s Name", "Company Name", "Company Address", "City, State, ZIP Code", "Start Date", "End Date", "Reason"],
-    "Invitation Letter for an Event": ["Your Name/Organization Name", "Your Address", "City, State, ZIP Code", "Your Email", "Your Phone Number", "Date", "Recipient’s Name", "Recipient’s Address", "City, State, ZIP Code", "Event Name", "Date", "Venue/Location", "Time", "Event Highlights", "RSVP Date", "Your Contact Information"],
+    "Job Application Letter": [
+      "Your Name",
+      "Your Address",
+      "City, State, ZIP Code",
+      "Your Email",
+      "Your Phone Number",
+      "Date",
+      "Hiring Manager’s Name",
+      "Company Name",
+      "Company Address",
+      "City, State, ZIP Code",
+      "Job Position",
+      "Your Field/Experience",
+      "Your Qualifications"
+    ],
+    "Resignation Letter": [
+      "Your Name",
+      "Your Address",
+      "City, State, ZIP Code",
+      "Your Email",
+      "Your Phone Number",
+      "Date",
+      "Manager’s Name",
+      "Company Name",
+      "Company Address",
+      "City, State, ZIP Code",
+      "Your Position",
+      "Last Working Date"
+    ],
+    "Leave of Absence Request": [
+      "Your Name",
+      "Your Address",
+      "City, State, ZIP Code",
+      "Your Email",
+      "Your Phone Number",
+      "Date",
+      "Manager’s Name",
+      "Company Name",
+      "Company Address",
+      "City, State, ZIP Code",
+      "Start Date",
+      "End Date",
+      "Reason"
+    ],
+    "Invitation Letter for an Event": [
+      "Your Name/Organization Name",
+      "Your Address",
+      "City, State, ZIP Code",
+      "Your Email",
+      "Your Phone Number",
+      "Date",
+      "Recipient’s Name",
+      "Recipient’s Address",
+      "City, State, ZIP Code",
+      "Event Name",
+      "Date",
+      "Venue/Location",
+      "Time",
+      "Event Highlights",
+      "RSVP Date",
+      "Your Contact Information"
+    ],
   };
   final List<String> informalLetters = [
     "Letter to a Friend (Sharing News)",
@@ -230,16 +301,21 @@ class LetterCategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(isFormal ? "Select Formal Letter" : "Select Informal Letter")),
+      appBar: AppBar(
+          title: Text(
+              isFormal ? "Select Formal Letter" : "Select Informal Letter")),
       body: ListView(
-        children: (isFormal ? formalFields.keys.toList() : informalLetters).map((letterType) {
+        children: (isFormal ? formalFields.keys.toList() : informalLetters)
+            .map((letterType) {
           return ListTile(
             title: Text(letterType),
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => LetterGeneratorPage(letterType: letterType, fields: isFormal ? formalFields[letterType]! : []),
+                  builder: (context) => LetterGeneratorPage(
+                      letterType: letterType,
+                      fields: isFormal ? formalFields[letterType]! : []),
                 ),
               );
             },
@@ -260,9 +336,10 @@ class LetterGeneratorPage extends StatefulWidget {
 }
 
 class _LetterGeneratorPageState extends State<LetterGeneratorPage> {
-  bool reload=true;
+  bool reload = true;
   final Map<String, TextEditingController> controllers = {};
-  final TextEditingController _letterEditingController = TextEditingController();
+  final TextEditingController _letterEditingController =
+      TextEditingController();
   String generatedLetter = "";
 
   @override
@@ -279,11 +356,14 @@ class _LetterGeneratorPageState extends State<LetterGeneratorPage> {
       generatedLetter = _letterEditingController.text;
     });
   }
+
 //apiiiii inteeegration
   Future<void> generateLetter() async {
     const String apiKey = "AIzaSyBwQ267Mz_6jSKhRF7Kx-ybRKZxhsL_qbI";
-    final String url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=$apiKey";
-    final details = controllers.entries.map((e) => "${e.key}: ${e.value.text}").join("\n");
+    final String url =
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=$apiKey";
+    final details =
+        controllers.entries.map((e) => "${e.key}: ${e.value.text}").join("\n");
     final response = await http.post(
       Uri.parse(url),
       headers: {'Content-Type': 'application/json'},
@@ -291,7 +371,10 @@ class _LetterGeneratorPageState extends State<LetterGeneratorPage> {
         "contents": [
           {
             "parts": [
-              {"text": "Generate a ${widget.letterType} using these details:\n$details"}
+              {
+                "text":
+                    "Generate a ${widget.letterType} using these details:\n$details"
+              }
             ]
           }
         ]
@@ -300,9 +383,11 @@ class _LetterGeneratorPageState extends State<LetterGeneratorPage> {
 
     if (response.statusCode == 200) {
       final responseData = jsonDecode(response.body);
-      if (responseData.containsKey("candidates") && responseData["candidates"].isNotEmpty) {
+      if (responseData.containsKey("candidates") &&
+          responseData["candidates"].isNotEmpty) {
         setState(() {
-          generatedLetter = responseData["candidates"][0]["content"]["parts"][0]["text"];
+          generatedLetter =
+              responseData["candidates"][0]["content"]["parts"][0]["text"];
           _letterEditingController.text = generatedLetter;
         });
       }
@@ -313,6 +398,7 @@ class _LetterGeneratorPageState extends State<LetterGeneratorPage> {
       });
     }
   }
+
 //pdffff
   Future<void> _generatePdfAndShare() async {
     final pdf = pw.Document();
@@ -340,7 +426,6 @@ class _LetterGeneratorPageState extends State<LetterGeneratorPage> {
       final output = await getTemporaryDirectory();
       final file = File("${output.path}/${widget.letterType}.pdf");
       await file.writeAsBytes(await pdf.save());
-
     }
   }
 
@@ -378,23 +463,26 @@ class _LetterGeneratorPageState extends State<LetterGeneratorPage> {
                 ),
                 onTap: isDateField
                     ? () async {
-                  DateTime? pickedDate = await showDatePicker(
-                    context: context,
-                    initialDate: DateTime.now(),
-                    firstDate: DateTime(2000),
-                    lastDate: DateTime(2100),
-                  );
-                  if (pickedDate != null) {
-                    controllers[field]!.text = "${pickedDate.toLocal()}".split(' ')[0];
-                  }
-                }
+                        DateTime? pickedDate = await showDatePicker(
+                          context: context,
+                          initialDate: DateTime.now(),
+                          firstDate: DateTime(2000),
+                          lastDate: DateTime(2100),
+                        );
+                        if (pickedDate != null) {
+                          controllers[field]!.text =
+                              "${pickedDate.toLocal()}".split(' ')[0];
+                        }
+                      }
                     : null,
               ),
             );
           }).toList(),
           SizedBox(height: 10),
-          ElevatedButton(onPressed: reload ? generateLetter : null,
-              child: Text(reload ? "Generate Letter" : "reload for another letter ")),
+          ElevatedButton(
+              onPressed: reload ? generateLetter : null,
+              child: Text(
+                  reload ? "Generate Letter" : "reload for another letter ")),
           SizedBox(height: 20),
           TextFormField(
             controller: _letterEditingController,
